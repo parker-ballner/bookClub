@@ -62,7 +62,7 @@ var allUsersInfoHandler = function (result, status, xhr) {
           var row = Math.floor(k / 4);
           $("#" + row + '').append(''
             + '<div data-pos="' + i + '"class="rowOfProfileContainers_userInfo" style="display:none">'
-            + '<img class="otherUserProfilePic" src="../images/placeHolder.png">'
+            + '<img class="otherUserProfilePic" src="../images/placeholder.png">'
             + '<p>' + result[i].username + '</p>' + '<button data-username="' + result[i].username + '" type="button" class="otherUserButton button-' + user.preferences.hue + '">See more info</button>'
             + '</div>'
             + '');
