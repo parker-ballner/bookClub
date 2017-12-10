@@ -287,7 +287,7 @@ var updatePreferences = function () {
   $('#confirmLogout').attr('class', 'confirmationPopup_button button-' + user.preferences.hue);
   $('#cancelLogout').attr('class', 'confirmationPopup_button button-' + user.preferences.hue);
   if (user.preferences.picture == null) {
-    $('#bigUserPic').attr('src', '../images/placeholder.png');
+    $('#bigUserPic').attr('src', '../images/placeHolder.png');
   } else {
     $('#bigUserPic').attr('src', '../images/' + user.preferences.picture + '.jpg');
   }

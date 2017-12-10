@@ -45,7 +45,7 @@ var allUsersInfoHandler = function (result, status, xhr) {
         }
       }
       for (var i = 0; i < result.length; i++) {
-        var thumbnail = 'placeholder.png';
+        var thumbnail = 'placeHolder.png';
         if (result[i].picture != null) thumbnail = result[i].picture + '.jpg';
         var k = (i % 12);
         if (i < 12) {
@@ -62,7 +62,7 @@ var allUsersInfoHandler = function (result, status, xhr) {
           var row = Math.floor(k / 4);
           $("#" + row + '').append(''
             + '<div data-pos="' + i + '"class="rowOfProfileContainers_userInfo" style="display:none">'
-            + '<img class="otherUserProfilePic" src="../images/placeholder.png">'
+            + '<img class="otherUserProfilePic" src="../images/' + thumbnail + '">'
             + '<p>' + result[i].username + '</p>' + '<button data-username="' + result[i].username + '" type="button" class="otherUserButton button-' + user.preferences.hue + '">See more info</button>'
             + '</div>'
             + '');
