@@ -20,6 +20,6 @@ app.use('/images', express.static(__dirname + '/client-side/images'))
 app.use('/', routes);
 
 //the app will listen on port 3000
-app.listen(3000, function () {
+app.listen(process.env.PORT || 5000, function () {
     console.log('App listening on port 3000!');
 });
