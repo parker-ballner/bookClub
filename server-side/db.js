@@ -3,10 +3,10 @@ var mysql = require('mysql');
 var Db = function () {
     //establish connection to the database
     this.connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'app',
-        password: 'PB1234',
-        database: 'book_club'
+        host: 'l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        user: 'iw06hchha33q6fby',
+        password: 'yfxsf21mnufsnmvw',
+        database: 'timsmrewy2b5dxg9'
     });
 }
 
