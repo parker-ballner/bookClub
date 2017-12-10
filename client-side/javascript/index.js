@@ -9,7 +9,7 @@ $(document).ready(function(){
       //If input exists, make ajax post to our url/login.
       $.ajax({
         type: "POST",
-        url: "https://comp426-bookclub.herokuapp.com//login",
+        url: "https://comp426-bookclub.herokuapp.com/login",
         data: {'username': userName, 'password': password},
         success: loginHandler,
         error: errorHandler

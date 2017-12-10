@@ -2,7 +2,7 @@ var user = {};
 $(document).ready(function () {
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getUser",
+    url: "https://comp426-bookclub.herokuapp.com/getUser",
     success: userInfoSuccessHandler,
     error: userInfoErrorHandler
   });
@@ -17,7 +17,7 @@ var userInfoSuccessHandler = function (result, status, xhr) {
     updatePreferences();
     $.ajax({
       type: "GET",
-      url: "http://localhost:3000/getUsers",
+      url: "https://comp426-bookclub.herokuapp.com/getUsers",
       success: allUsersInfoHandler,
       error: allUsersInfoErrorHandler
     });
@@ -94,7 +94,7 @@ var seeMoreListener = function () {
 
     $.ajax({
       type: "GET",
-      url: "http://localhost:3000/getFavorites/" + userName,
+      url: "https://comp426-bookclub.herokuapp.com/getFavorites/" + userName,
       success: favoritesInfoHandler,
       error: favoritesInfoErrorHandler
     })
@@ -119,7 +119,7 @@ var addToFavoritesListener = function () {
       //Ajax call to add to favorites
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/newFavorite",
+        url: "https://comp426-bookclub.herokuapp.com/newFavorite",
         data: { 'username': user.username, 'isbn': isbn },
         error: favoriteAddErrorHandler
       });

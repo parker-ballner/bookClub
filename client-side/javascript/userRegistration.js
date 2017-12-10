@@ -20,7 +20,7 @@ $(document).ready(function () {
                 //If input exists, make ajax post to newUser.
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:3000/newUser",
+                    url: "https://comp426-bookclub.herokuapp.com/newUser",
                     data: { 'username': userName, 'password': password, 'email': email},
                     success: loginHandler,
                     error: errorHandler

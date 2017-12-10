@@ -5,7 +5,7 @@ $(document).ready(function(){
         $("#confirmLogout").click(function(){
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/logout",
+                url: "https://comp426-bookclub.herokuapp.com/logout",
                 success: function () {
                     window.location = '../';
                 }

@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getUser",
+    url: "https://comp426-bookclub.herokuapp.com/getUser",
     success: userInfoHandler,
     error: userInfoErrorHandler
   });
@@ -47,7 +47,7 @@ $(document).ready(function () {
     $("#confirmDelete").click(function (){
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/delUser",
+        url: "https://comp426-bookclub.herokuapp.com/delUser",
         data: { 'username': user.username },
         success: deleteSuccessHandler,
         error: deleteErrorHandler
@@ -67,7 +67,7 @@ $(document).ready(function () {
     var colorSquare = $(this)
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/updatePreferences",
+      url: "https://comp426-bookclub.herokuapp.com/updatePreferences",
       data: { 'username': user.username, 'type': 'color', 'color': color },
       success: function (result, status, xhr) {
         user.preferences.color = color;
@@ -88,7 +88,7 @@ $(document).ready(function () {
     var thumbnail = $(this);
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/updatePreferences",
+      url: "https://comp426-bookclub.herokuapp.com/updatePreferences",
       data: { 'username': user.username, 'type': 'picture', 'picture': picture },
       success: function (result, status, xhr) {
         user.preferences.picture = picture;

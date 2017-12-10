@@ -5,20 +5,20 @@ $(document).ready(function () {
   //initial ajax requests
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getUser",
+    url: "https://comp426-bookclub.herokuapp.com/getUser",
     success: userInfoHandler,
     error: userInfoErrorHandler
   });
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getTime",
+    url: "https://comp426-bookclub.herokuapp.com/getTime",
     success: function (result, status, xhr) {
       if (xhr.status == 200) {
         //start time countdown and get current book
         countDown(result.time);
         $.ajax({
           type: "GET",
-          url: "http://localhost:3000/getCurrentBook",
+          url: "https://comp426-bookclub.herokuapp.com/getCurrentBook",
           success: currentBookSuccessHandler,
           error: currentBookErrorHandler
         });
@@ -31,7 +31,7 @@ $(document).ready(function () {
   });
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getVotingBooks",
+    url: "https://comp426-bookclub.herokuapp.com/getVotingBooks",
     success: function (result, status, xhr) {
       votingListSuccessHandler(result, status, xhr);
       //updateVotingList();
@@ -56,7 +56,7 @@ $(document).ready(function () {
         //Ajax call to add to favorites
         $.ajax({
           type: "POST",
-          url: "http://localhost:3000/newFavorite",
+          url: "https://comp426-bookclub.herokuapp.com/newFavorite",
           data: { 'username': user.username, 'isbn': currentBook },
           success: favoriteAddSuccessHandler,
           error: favoriteAddErrorHandler
@@ -80,7 +80,7 @@ $(document).ready(function () {
     var isbn = $(this).attr('value');
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/newBook",
+      url: "https://comp426-bookclub.herokuapp.com/newBook",
       data: { 'username': user.username, 'isbn': isbn },
       success: newBookSuccessHandler,
       error: newBookErrorHandler
@@ -98,7 +98,7 @@ $(document).ready(function () {
     var isbn = $(this).attr('value');
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/newVote",
+      url: "https://comp426-bookclub.herokuapp.com/newVote",
       data: { 'username': user.username, 'isbn': isbn },
       success: newVoteSuccessHandler,
       error: newVoteErrorHandler
@@ -308,7 +308,7 @@ var newBookSuccessHandler = function (result, status, xhr) {
   if (xhr.status == 200) {
     $.ajax({
       type: "GET",
-      url: "http://localhost:3000/getVotingBooks",
+      url: "https://comp426-bookclub.herokuapp.com/getVotingBooks",
       success: votingListSuccessHandler,
       error: votingListErrorHandler
     });
@@ -340,7 +340,7 @@ var newVoteSuccessHandler = function (result, status, xhr) {
   $('#votingInterfaceHeader').text("You've already voted for the next book, but here's the standings:");
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/getVotingBooks",
+    url: "https://comp426-bookclub.herokuapp.com/getVotingBooks",
     success: votingListSuccessHandler,
     error: votingListErrorHandler
   });
