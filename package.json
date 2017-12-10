@@ -10,6 +10,9 @@
     "express-session": "^1.15.6",
     "mysql": "^2.14.1"
   },
+  "scripts" : {
+    "start": "node index.js"
+  },
   "engines": {
     "node": "6.10.3"
   }
