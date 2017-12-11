@@ -138,7 +138,7 @@ router.get('/getTime', function (req, res, next) {
         var currentDate = {
             'year': date.getFullYear(),
             'month': date.getMonth() + 1,
-            'day': date.getDate(),
+            'day': date.getDate() + 1,
             'hour': date.getHours(),
             'minutes': date.getMinutes()
         }
