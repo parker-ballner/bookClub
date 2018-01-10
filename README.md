@@ -1,10 +1,9 @@
 bookClub
 ==================================
 
-**Authors: Andrew McKinnon and Parker Ballner**
-
-Modern Web Programming Final Project
+Authors: Andrew McKinnon and Parker Ballner
 ==================================
+
 
 **Languages and tools used:**
 -----------------------------
